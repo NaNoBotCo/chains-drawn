@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en" translate="no" class="notranslate">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="google" content="notranslate">
+<title>Chains, Drawn</title>
+<meta name="description" content="ChainsAtlas and the other ways blockchains talk, as toys: a stove in every town, recipe cards with fingerprints, a planner's levers, crooked judges, a mule pen and a key rack. English and Thai.">
+<link rel="canonical" href="https://nanobotco.github.io/chains-drawn/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NaNoBotCo">
+<meta property="og:title" content="Chains, Drawn · โซ่ วาดให้ดู">
+<meta property="og:description" content="Carry the mule, or carry the stove? ChainsAtlas and its cousins, as toys. · จูงล่อข้ามไป หรือแบกเตาไปเอง">
+<meta property="og:url" content="https://nanobotco.github.io/chains-drawn/">
+<meta property="og:image" content="https://nanobotco.github.io/chains-drawn/card.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Five towns across a creek, a stove in each, with the words Chains, Drawn in English and Thai.">
+<meta property="og:locale" content="en_US"><meta property="og:locale:alternate" content="th_TH">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://nanobotco.github.io/chains-drawn/card.jpg">
+<link rel="alternate" type="text/plain" href="https://nanobotco.github.io/chains-drawn/llms.txt" title="llms.txt">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rye&family=Atkinson+Hyperlegible:wght@400;700&family=Mitr:wght@500&family=Sarabun:wght@400;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root{
+  --ground:#eef2ec; --panel:#fbfcf8; --well:#e4ebe1; --ink:#17231d; --muted:#55625b; --rule:#cfd8cb;
+  --red:#b8322a; --blue:#2456a6; --gold:#d9a514; --goldtext:#8a6500; --rust:#c76a22; --green:#2e7d4f; --wood:#8a5a32; --creek:#7fb3d9;
+  --display:"Rye","Mitr",Georgia,serif; --thai-display:"Mitr","Sarabun",Tahoma,sans-serif;
+  --body:"Atkinson Hyperlegible","Sarabun",Tahoma,system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0f1714; --panel:#17211c; --well:#1e2a24; --ink:#e8efe9; --muted:#9aa9a0; --rule:#2c3a32;
+  --red:#e0655b; --blue:#6d9be8; --gold:#f0c23c; --goldtext:#f0c23c; --rust:#e58a45; --green:#5cc186; --wood:#b07a4c; --creek:#2f5f86; color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --ground:#0f1714; --panel:#17211c; --well:#1e2a24; --ink:#e8efe9; --muted:#9aa9a0; --rule:#2c3a32;
+  --red:#e0655b; --blue:#6d9be8; --gold:#f0c23c; --goldtext:#f0c23c; --rust:#e58a45; --green:#5cc186; --wood:#b07a4c; --creek:#2f5f86; color-scheme:dark;}
+*{box-sizing:border-box}
+html,body{background:var(--ground);color:var(--ink)}
+body{margin:0;font:21px/1.65 var(--body);padding-inline:16px;padding-block:0 72px}
+.wrap{max-width:740px;margin:0 auto}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+[data-lang="en"] .th{display:none!important}
+[data-lang="th"] .en{display:none!important}
+header.bar{display:flex;align-items:center;gap:12px;max-width:740px;margin:0 auto;padding-block:14px}
+.brand{font:22px var(--display);margin-right:auto;white-space:nowrap}
+.lang{display:flex;border:2px solid var(--ink);border-radius:999px;overflow:hidden}
+.lang button{font:700 18px var(--body);background:none;border:0;color:var(--ink);padding:6px 18px;cursor:pointer;min-height:44px}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+h1,h2,h3{margin:0;line-height:1.12;text-wrap:balance;font-weight:400;font-family:var(--display)}
+[data-lang="th"] h1,[data-lang="th"] h2,[data-lang="th"] h3,[data-lang="th"] .brand{font-family:var(--thai-display);font-weight:500}
+h1{font-size:clamp(40px,9vw,66px);margin-top:10px}
+h2{font-size:clamp(30px,6vw,40px);display:flex;gap:14px;align-items:center}
+h2 svg{flex:none;width:50px;height:50px}
+h3{font-size:26px;margin-top:26px}
+.lede{font-size:23px}
+section{margin:44px 0}
+section>p{margin:.6em 0}
+.toy{background:var(--panel);border:2px solid var(--ink);border-radius:14px;padding:16px;margin:18px 0 8px;box-shadow:5px 5px 0 var(--rule)}
+.toy svg{display:block;width:100%;height:auto}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:12px 0}
+button.go{font:700 18px var(--body);color:var(--ink);background:var(--panel);border:2px solid var(--ink);border-radius:10px;padding:8px 16px;cursor:pointer;min-height:48px}
+button.go:active{transform:translateY(2px)}
+button.go.primary,button.go[aria-pressed="true"]{background:var(--ink);color:var(--ground)}
+button.go.warn{border-color:var(--red);color:var(--red)}
+.say{font-size:21px;font-weight:700;margin-top:10px;min-height:1.65em}
+.say b,.big{color:var(--goldtext)}
+.bad{color:var(--red)} .good{color:var(--green)}
+.mono{font-family:var(--mono);font-size:17px}
+/* lever */
+.lever{display:flex;align-items:center;gap:14px;margin:14px 0 4px;flex-wrap:wrap}
+.lever .side{font-weight:700;font-size:19px}
+.switch{position:relative;width:128px;height:56px;border-radius:999px;border:3px solid var(--ink);background:var(--well);cursor:pointer;padding:0}
+.switch .knob{position:absolute;top:4px;left:4px;width:42px;height:42px;border-radius:50%;background:var(--red);border:3px solid var(--ink);transition:left .35s}
+.switch[aria-checked="true"] .knob{left:74px;background:var(--gold)}
+/* hero map */
+#map .mule{transition:transform 1.4s ease-in-out}
+#map .stove,#map .paper,#map .card{transition:opacity .5s}
+#map .off{opacity:0}
+/* ledgers */
+.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.book{background:var(--well);border-radius:10px;padding:10px 12px;border-left:8px solid var(--wood)}
+.book h4{margin:0 0 6px;font:700 19px var(--body)}
+.book ol{margin:0;padding-left:1.3em;font-size:16px;line-height:1.5;min-height:6em}
+.book li.new{background:var(--gold);color:#17231d;border-radius:4px}
+.book button{margin-top:8px;width:100%}
+/* stove */
+.stovegrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:600px){.stovegrid{grid-template-columns:1fr}}
+.code{background:var(--well);border-radius:10px;padding:10px 12px;font-family:var(--mono);font-size:16px;line-height:1.55;overflow-x:auto;white-space:pre;margin:0}
+.words{list-style:none;margin:0;padding:10px 12px;background:var(--well);border-radius:10px;font-family:var(--mono);font-size:16px}
+.words li{padding:3px 6px;border-radius:6px;display:flex;gap:10px;justify-content:space-between}
+.words li small{font-family:var(--body);color:var(--muted);font-size:15px;text-align:right}
+.words li.at{background:var(--gold);color:#17231d}
+.words li.at small{color:#17231d}
+.regs{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.reg{min-width:74px;text-align:center;border:2px solid var(--ink);border-radius:8px;padding:4px 8px;background:var(--panel)}
+.reg small{display:block;font-size:14px;color:var(--muted)}
+.reg b{font:700 22px var(--mono)}
+.reg.box{border-style:dashed}
+.step{display:inline-flex;align-items:center;gap:6px;font-weight:700}
+.step button{width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);background:var(--panel);color:var(--ink);font:700 22px var(--body);cursor:pointer}
+.step output{font:700 24px var(--mono);min-width:2ch;text-align:center}
+.towns{display:flex;flex-wrap:wrap;gap:8px}
+.towns button{min-height:44px}
+table{border-collapse:collapse;width:100%;font-size:17px;font-variant-numeric:tabular-nums}
+th,td{padding:7px 6px;border-bottom:1px solid var(--rule);text-align:left}
+th{font-size:15px;color:var(--muted);font-weight:700}
+td.n,th.n{text-align:right}
+tr.out td{color:var(--muted);text-decoration:line-through}
+tr.win td{background:var(--gold);color:#17231d;font-weight:700}
+.tablewrap{overflow-x:auto}
+.voted{color:var(--rust)}
+/* cards */
+.cards{display:flex;gap:10px;overflow-x:auto;padding:4px 2px 10px}
+.slip{flex:0 0 200px;background:var(--well);border:2px solid var(--ink);border-radius:8px;padding:8px 10px;font-size:15px}
+.slip h4{margin:0 0 4px;font:700 17px var(--body)}
+.slip ol{margin:0;padding-left:1.4em;font-family:var(--mono);font-size:14px}
+.slip .pot{margin-top:6px;border-top:2px dashed var(--muted);padding-top:4px;font-family:var(--mono);font-size:14px}
+.slip .fp{margin-top:4px;font-family:var(--mono);font-size:14px}
+.slip.caught{border-color:var(--red);background:color-mix(in srgb,var(--red) 16%,var(--well))}
+.slip li.crook{color:var(--red);font-weight:700}
+.range{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;margin:10px 0}
+.range label{font-weight:700;font-size:19px}
+.range input{grid-column:1/2;width:100%;accent-color:var(--rust);height:32px}
+.range output{font:700 22px var(--mono);text-align:right;grid-row:1/3;grid-column:2}
+.ends{display:flex;justify-content:space-between;font-size:15px;color:var(--muted);grid-column:1/2}
+/* judges */
+.judges{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.judge{border:2px solid var(--rule);border-radius:10px;padding:8px 10px;background:var(--well);font-size:16px}
+.judge.picked{border-color:var(--ink);background:var(--panel);box-shadow:3px 3px 0 var(--gold)}
+.judge b{font-size:19px}
+.bar{height:10px;border-radius:5px;background:var(--rule);margin:3px 0 6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold)}
+.bar.rec i{background:var(--green)}
+.vote{font-weight:700}
+/* keys */
+.keys{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}
+.key{width:48px;height:48px;border-radius:8px;border:2px solid var(--ink);background:var(--panel);cursor:pointer;padding:4px}
+.key svg{width:100%;height:100%}
+.key[aria-pressed="true"]{background:var(--red)}
+.vault{font:28px var(--display);margin-top:6px}
+[data-lang="th"] .vault{font-family:var(--thai-display)}
+.ways{display:flex;flex-wrap:wrap;gap:8px}
+.ways button{min-height:44px;font-size:17px}
+.trust{background:var(--well);border-radius:10px;padding:10px 14px;margin-top:10px}
+.trust p{margin:.3em 0}
+.kin{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:14px}
+.kin div{border-top:4px solid var(--rust);padding-top:6px}
+.kin b{display:block;font-size:20px}
+dl.gloss{margin:0} dl.gloss dt{font-weight:700;margin-top:12px} dl.gloss dd{margin:0}
+ol.src{font-size:16px;line-height:1.55;padding-left:1.3em} ol.src li{margin:.45em 0}
+footer{max-width:740px;margin:40px auto 0;font-size:16px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){#map .mule,.switch .knob,#map .stove,#map .paper,#map .card{transition:none}}
+@media (max-width:520px){.brand{font-size:18px}.lang button{padding:6px 12px;font-size:17px}body{font-size:20px}.toy{padding:12px}h2 svg{width:40px;height:40px}.slip{flex-basis:170px}}
+</style>
+
+</head>
+<body>
+<div data-root>
+<header class="bar">
+  <span class="brand"><span class="en">Chains, Drawn</span><span class="th">โซ่ วาดให้ดู</span></span>
+  <div class="lang" role="group" aria-label="Language / ภาษา">
+    <button type="button" data-l="en" aria-pressed="true">English</button>
+    <button type="button" data-l="th" aria-pressed="false">ไทย</button>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1><span class="en">Carry the Mule, or Carry the Stove</span><span class="th">จูงล่อข้ามไป หรือแบกเตาไปเอง</span></h1>
+  <p class="lede en">Out here every holler keeps its own ledger book, and none of 'em talk to each other. Folks been tryin' to fix that for years. There's two ways to go about it: haul your mule across the creek, or carry your own stove to every town. ChainsAtlas is a stove outfit. Flip the lever.</p>
+  <p class="lede th">แต่ละหมู่บ้านมีสมุดบัญชีของตัวเอง และไม่คุยกันเลย คนพยายามแก้เรื่องนี้มาหลายปี มีสองทาง: จูงล่อข้ามลำห้วยไป หรือแบกเตาของตัวเองไปตั้งทุกหมู่บ้าน ChainsAtlas เลือกทางแบกเตา ลองโยกคันดูสิ</p>
+
+  <div class="toy">
+    <svg id="map" viewBox="0 0 680 300" role="img" aria-label="Five pretend towns on either side of a creek"></svg>
+    <div class="lever">
+      <span class="side"><span class="en">Carry the mule</span><span class="th">จูงล่อ</span></span>
+      <button type="button" class="switch" id="heroSwitch" role="switch" aria-checked="true" aria-label="Mule or stove"><span class="knob"></span></button>
+      <span class="side"><span class="en">Carry the stove</span><span class="th">แบกเตา</span></span>
+    </div>
+    <p class="say" id="heroSay" aria-live="polite"></p>
+  </div>
+
+  <!-- 1 books -->
+  <section id="books">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="8" y="8" width="36" height="38" rx="3" fill="var(--wood)" stroke="var(--ink)" stroke-width="2.5"/><rect x="14" y="8" width="4" height="38" fill="var(--ink)"/><path d="M22 18h16M22 25h16M22 32h12" stroke="var(--gold)" stroke-width="3"/></svg>
+      <span class="en">Every holler keeps its own book</span><span class="th">สมุดบัญชีของใครของมัน</span></h2>
+    <p class="en">A <b>blockchain</b> is a ledger book a whole town keeps together. Hundreds of folks hold a copy, so nobody can scratch out a line on the sly. The folks holdin' copies are the <b>book-keepers</b> (the trade calls 'em validators).</p>
+    <p class="th"><b>บล็อกเชน</b> คือสมุดบัญชีที่คนทั้งหมู่บ้านช่วยกันจด คนเป็นร้อยถือสำเนาไว้ ใครจะแอบลบสักบรรทัดก็ไม่ได้ คนถือสำเนาเรียกว่า <b>ผู้ตรวจบัญชี</b> (ภาษาช่างเรียก validator)</p>
+    <p class="en">Some books can run little programs too, rules wrote right into the book. Them's <b>smart contracts</b>. Trouble is, each town reads its own kind of recipe (Ethereum reads one kind, Cardano another), and Big Creek's book don't know one thing about what's wrote in Frog Level's.</p>
+    <p class="th">สมุดบางเล่มรันโปรแกรมเล็ก ๆ ได้ด้วย เป็นกฎที่เขียนลงในสมุดเลย เรียกว่า <b>สมาร์ตคอนแทรกต์</b> ปัญหาคือแต่ละหมู่บ้านอ่านสูตรคนละแบบ (Ethereum อ่านแบบหนึ่ง Cardano อ่านอีกแบบ) และสมุดของบ้านห้วยใหญ่ไม่รู้เลยว่าสมุดของบ้านหนองกบเขียนอะไรไว้</p>
+    <div class="toy">
+      <div class="books" id="bookRow"></div>
+      <p class="say" id="bookSay" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- 2 stove -->
+  <section id="stove">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="8" y="20" width="32" height="26" rx="3" fill="var(--ink)"/><rect x="36" y="4" width="7" height="18" fill="var(--ink)"/><circle cx="24" cy="33" r="7" fill="var(--rust)"/><path d="M24 29c-3 3-3 6 0 8 3-2 3-5 0-8z" fill="var(--gold)"/></svg>
+      <span class="en">Bring your own stove</span><span class="th">แบกเตาไปเอง</span></h2>
+    <p class="en">ChainsAtlas don't haul your stuff between towns. It sets up the same little stove in every town. The stove is a pretend computer (a <b>virtual machine</b>) built out of a smart contract. It reads one plain set of cookin' words, borrowed from <b>DLX</b>, a teachin' computer out of a 1990s college textbook. Write your recipe once in C, the old workhorse language, and it cooks the same in any town that's got the stove. ChainsAtlas calls the stove a <b>virtualization unit</b>.</p>
+    <p class="th">ChainsAtlas ไม่ได้ขนของข้ามหมู่บ้าน แต่เอาเตาแบบเดียวกันไปตั้งไว้ทุกหมู่บ้าน เตานี้คือคอมพิวเตอร์จำลอง (<b>virtual machine</b>) ที่สร้างจากสมาร์ตคอนแทรกต์ มันอ่านคำสั่งทำอาหารชุดเดียว ยืมมาจาก <b>DLX</b> คอมพิวเตอร์สำหรับสอนในตำรามหาวิทยาลัยยุค 1990 เขียนสูตรครั้งเดียวด้วยภาษา C แล้วเอาไปทำที่หมู่บ้านไหนก็ได้ที่มีเตา ออกมารสเดียวกัน ChainsAtlas เรียกเตานี้ว่า <b>virtualization unit</b></p>
+    <p class="en">This here's the very recipe from their own instructions: add two numbers. Step it through.</p>
+    <p class="th">นี่คือสูตรจากคู่มือของเขาเอง: บวกเลขสองตัว ลองกดทีละขั้น</p>
+    <div class="toy">
+      <div class="stovegrid">
+        <div>
+          <p class="mono" style="margin:0 0 4px"><span class="en">Recipe, in C</span><span class="th">สูตร ภาษา C</span></p>
+<pre class="code">long main() {
+  long x, y, z;
+  x = load(1);
+  y = load(2);
+  z = x + y;
+  store(z);
+  return z;
+}</pre>
+        </div>
+        <div>
+          <p class="mono" style="margin:0 0 4px"><span class="en">Stove words</span><span class="th">คำสั่งของเตา</span></p>
+          <ol class="words" id="sumWords"></ol>
+        </div>
+      </div>
+      <div class="row">
+        <span class="step">x <button type="button" data-d="x-">−</button><output id="xOut">3</output><button type="button" data-d="x+">+</button></span>
+        <span class="step">y <button type="button" data-d="y-">−</button><output id="yOut">4</output><button type="button" data-d="y+">+</button></span>
+      </div>
+      <div class="regs" id="sumRegs"></div>
+      <div class="row">
+        <button type="button" class="go primary" id="sumStep"><span class="en">Next step</span><span class="th">ขั้นถัดไป</span></button>
+        <button type="button" class="go" id="sumReset"><span class="en">Start over</span><span class="th">เริ่มใหม่</span></button>
+        <button type="button" class="go" id="sumAll"><span class="en">Cook it in all five towns</span><span class="th">ทำพร้อมกันทั้งห้าหมู่บ้าน</span></button>
+      </div>
+      <p class="say" id="sumSay" aria-live="polite"></p>
+      <div class="tablewrap" id="sumTable"></div>
+    </div>
+  </section>
+
+  <!-- 3 cards -->
+  <section id="cards">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="6" y="14" width="26" height="32" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5" transform="rotate(-8 19 30)"/><rect x="20" y="8" width="26" height="32" rx="3" fill="var(--gold)" stroke="var(--ink)" stroke-width="2.5"/><path d="M26 18h14M26 24h14M26 30h9" stroke="var(--ink)" stroke-width="2.5"/></svg>
+      <span class="en">Too long for one card</span><span class="th">สูตรยาวเกินการ์ดใบเดียว</span></h2>
+    <p class="en">Every town caps how much you can write on one slip (a <b>transaction</b>, one entry in the book). A long recipe won't fit. So it gets cut into cards. At the bottom of each card the stove writes down what's in the pot, every number it's holdin', so the next card picks up right where the last one quit. The whitepaper calls that <b>execution transfer</b>.</p>
+    <p class="th">ทุกหมู่บ้านจำกัดว่าใบเดียวเขียนได้แค่ไหน (ใบหนึ่งคือ <b>ธุรกรรม</b> หนึ่งรายการในสมุด) สูตรยาว ๆ ใส่ไม่พอ เลยต้องตัดเป็นหลายการ์ด ท้ายการ์ดแต่ละใบ เตาจดไว้ว่าในหม้อมีอะไร ตัวเลขทุกตัวที่ถืออยู่ การ์ดใบถัดไปจะได้ทำต่อจากตรงนั้นพอดี เอกสารเรียกว่า <b>execution transfer</b></p>
+    <p class="en">Each card also carries the fingerprint of the next card: a <b>SHA-256 hash</b>, a short code that changes clean through if you change one letter. Slip in a crooked card and the fingerprint won't match. The recipe below splits a feed bill between two neighbors: sacks times price, plus $4 delivery, halved.</p>
+    <p class="th">การ์ดแต่ละใบยังพกลายนิ้วมือของใบถัดไปด้วย คือ <b>แฮช SHA-256</b> รหัสสั้น ๆ ที่เปลี่ยนหมดทั้งแถวถ้าแก้ตัวอักษรตัวเดียว ถ้าแอบสลับการ์ดปลอมเข้าไป ลายนิ้วมือจะไม่ตรง สูตรข้างล่างหารค่าอาหารสัตว์ระหว่างเพื่อนบ้านสองคน: จำนวนกระสอบคูณราคา บวกค่าส่ง 4 ดอลลาร์ แล้วหารสอง</p>
+    <div class="toy">
+      <div class="row">
+        <span class="step"><span class="en">sacks</span><span class="th">กระสอบ</span> <button type="button" data-f="s-">−</button><output id="sOut">5</output><button type="button" data-f="s+">+</button></span>
+        <span class="step"><span class="en">$ a sack</span><span class="th">$ ต่อกระสอบ</span> <button type="button" data-f="p-">−</button><output id="pOut">12</output><button type="button" data-f="p+">+</button></span>
+      </div>
+      <div class="range">
+        <label for="cardSize"><span class="en">Lines a town allows on one slip</span><span class="th">บรรทัดที่หมู่บ้านยอมให้เขียนต่อใบ</span></label>
+        <input type="range" id="cardSize" min="1" max="4" value="3">
+        <output id="cardSizeOut">3</output>
+        <div class="ends"><span class="en">stingy</span><span class="th">ขี้เหนียว</span><span class="en">roomy</span><span class="th">ใจกว้าง</span></div>
+      </div>
+      <div class="cards" id="slips"></div>
+      <div class="row">
+        <button type="button" class="go warn" id="crook" aria-pressed="false"><span class="en">Slip in a crooked card</span><span class="th">แอบสลับการ์ดปลอม</span></button>
+      </div>
+      <p class="say" id="slipSay" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- 4 strategist -->
+  <section id="plan">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M6 44 L26 6 L46 44z" fill="var(--gold)" stroke="var(--ink)" stroke-width="2.5"/><path d="M26 20v12" stroke="var(--ink)" stroke-width="4"/><circle cx="26" cy="38" r="2.5" fill="var(--ink)"/></svg>
+      <span class="en">Which town cooks it?</span><span class="th">หมู่บ้านไหนทำดี?</span></h2>
+    <p class="en">Every town has a report card, called a <b>chain profile</b>. Some lines get measured: fees, speed, slip size, how many book-keepers. Some get <span class="voted">voted on</span>, like how spread-out the book-keepin' is. Nobody can measure that with a yardstick, so folks vote.</p>
+    <p class="th">ทุกหมู่บ้านมีสมุดพก เรียกว่า <b>chain profile</b> บางช่องวัดได้ เช่น ค่าธรรมเนียม ความเร็ว ขนาดใบ จำนวนผู้ตรวจบัญชี บางช่อง<span class="voted">ต้องโหวต</span> เช่น การถือบัญชีกระจายกันแค่ไหน ไม่มีไม้บรรทัดวัดได้ คนเลยโหวตกัน</p>
+    <p class="en">You tell the network what you'll put up with. Folks called <b>strategists</b> race to find the cheapest plan that fits, and the winner gets paid. The whitepaper calls that <b>Proof-of-Strategy</b>. Pull the levers. (These five towns are pretend; their numbers are made up for the toy.)</p>
+    <p class="th">คุณบอกเครือข่ายว่ารับได้แค่ไหน คนที่เรียกว่า <b>นักวางแผน</b> (strategist) จะแข่งกันหาแผนที่ถูกที่สุดที่เข้าเงื่อนไข คนชนะได้ค่าจ้าง เอกสารเรียกว่า <b>Proof-of-Strategy</b> ลองโยกคันดู (ห้าหมู่บ้านนี้สมมติขึ้น ตัวเลขก็แต่งขึ้นเพื่อของเล่นนี้)</p>
+    <div class="toy">
+      <div class="range">
+        <label for="alpha"><span class="en">Cheap ↔ In a hurry</span><span class="th">ถูก ↔ รีบ</span></label>
+        <input type="range" id="alpha" min="0" max="10" value="5">
+        <output id="alphaOut">0.5</output>
+        <div class="ends"><span class="en">cheap</span><span class="th">ถูก</span><span class="en">hurry</span><span class="th">รีบ</span></div>
+      </div>
+      <div class="range">
+        <label for="minKeep"><span class="en">At least this many book-keepers</span><span class="th">ผู้ตรวจบัญชีอย่างน้อย</span></label>
+        <input type="range" id="minKeep" min="0" max="1000" step="50" value="100">
+        <output id="minKeepOut">100</output>
+      </div>
+      <div class="range">
+        <label for="minSpread"><span class="en">At least this spread-out (voted, 0–10)</span><span class="th">กระจายอย่างน้อย (โหวต 0–10)</span></label>
+        <input type="range" id="minSpread" min="0" max="10" value="5">
+        <output id="minSpreadOut">5</output>
+      </div>
+      <div class="tablewrap" id="planTable"></div>
+      <p class="say" id="planSay" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- 5 judges -->
+  <section id="judges">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M26 6v36M10 16h32" stroke="var(--ink)" stroke-width="3"/><path d="M4 30l6-14 6 14zM36 30l6-14 6 14z" fill="var(--gold)" stroke="var(--ink)" stroke-width="2.5"/><rect x="16" y="42" width="20" height="5" fill="var(--ink)"/></svg>
+      <span class="en">Who checks the planner?</span><span class="th">ใครตรวจนักวางแผน?</span></h2>
+    <p class="en">Before a plan cooks, a few judges check it. They're called <b>Pythians</b>, after the oracle at Delphi; this outfit named near everything after old Greek gods. A judge gets picked on three things: 40% the coins they put up (their <b>stake</b>), 20% the luck of the draw, 40% their track record. Side with the majority and your record goes up a notch.</p>
+    <p class="th">ก่อนแผนจะเริ่มทำ มีกรรมการไม่กี่คนตรวจก่อน เรียกว่า <b>Pythian</b> ตั้งชื่อตามร่างทรงแห่งเดลฟี บริษัทนี้ตั้งชื่อแทบทุกอย่างตามเทพกรีก กรรมการถูกเลือกด้วยสามอย่าง: 40% เหรียญที่วางค้ำไว้ (<b>stake</b>) 20% ดวง 40% ประวัติการตัดสิน ถ้าตัดสินตรงกับเสียงส่วนใหญ่ ประวัติจะขึ้นหนึ่งขั้น</p>
+    <p class="en">The coins come in two kinds: <b>Athena</b> for votin', and <b>Hermes</b>, earned by lockin' up Athena, for payin' the cook. Buck, over there, is crooked. Give him more coins and see how far it gets him.</p>
+    <p class="th">เหรียญมีสองชนิด: <b>Athena</b> ใช้โหวต และ <b>Hermes</b> ได้จากการล็อก Athena ไว้ ใช้จ่ายค่าเตา บัคคนนั้นขี้โกง ลองให้เหรียญเขาเพิ่มแล้วดูว่าไปได้ไกลแค่ไหน</p>
+    <div class="toy">
+      <div class="range">
+        <label for="buck"><span class="en">Buck's coins</span><span class="th">เหรียญของบัค</span></label>
+        <input type="range" id="buck" min="0" max="200" step="10" value="60">
+        <output id="buckOut">60</output>
+      </div>
+      <div class="judges" id="judgeRow"></div>
+      <div class="row">
+        <button type="button" class="go primary" id="jDraw"><span class="en">Draw 3 judges and vote</span><span class="th">จับกรรมการ 3 คนแล้วโหวต</span></button>
+        <button type="button" class="go" id="j20"><span class="en">Run 20 rounds</span><span class="th">เล่น 20 รอบ</span></button>
+        <button type="button" class="go" id="jReset"><span class="en">Start over</span><span class="th">เริ่มใหม่</span></button>
+      </div>
+      <p class="say" id="judgeSay" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- 6 other ways -->
+  <section id="bridges">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><path d="M2 36h48" stroke="var(--ink)" stroke-width="3"/><path d="M6 36c6-18 34-18 40 0" fill="none" stroke="var(--wood)" stroke-width="4"/><path d="M2 44c8-4 16 4 24 0s16 4 24 0" fill="none" stroke="var(--creek)" stroke-width="4"/></svg>
+      <span class="en">Other ways across the creek</span><span class="th">ทางอื่นที่คนข้ามห้วย</span></h2>
+    <p class="en">Most <b>bridges</b> work like a pawn shop. You pen your mule in Big Creek, and Frog Level hands you a paper mule, an IOU, to trade over there. The paper's good only as long as the real mule stays in the pen.</p>
+    <p class="th"><b>สะพาน</b>ส่วนใหญ่ทำงานเหมือนโรงรับจำนำ คุณขังล่อไว้ที่บ้านห้วยใหญ่ แล้วบ้านหนองกบให้ล่อกระดาษ เป็นใบรับรอง เอาไว้ซื้อขายฝั่งโน้น กระดาษมีค่าเท่าที่ล่อตัวจริงยังอยู่ในคอก</p>
+    <div class="toy">
+      <svg id="pen" viewBox="0 0 680 220" role="img" aria-label="A mule pen on one bank, a paper mule on the other"></svg>
+      <div class="row">
+        <button type="button" class="go primary" id="penIn"><span class="en">Pen the mule, get paper</span><span class="th">ขังล่อ รับกระดาษ</span></button>
+        <button type="button" class="go" id="penOut"><span class="en">Tear up paper, get mule back</span><span class="th">ฉีกกระดาษ รับล่อคืน</span></button>
+        <button type="button" class="go warn" id="penRob"><span class="en">Rustlers hit the pen</span><span class="th">โจรปล้นคอก</span></button>
+      </div>
+      <p class="say" id="penSay" aria-live="polite"></p>
+    </div>
+
+    <h3><span class="en">Who holds the keys to the pen?</span><span class="th">ใครถือกุญแจคอก?</span></h3>
+    <p class="en">Usually a committee. The gate opens when enough of 'em turn their key. Steal that many keys and the pen is yours. Tap keys to steal 'em.</p>
+    <p class="th">ส่วนใหญ่เป็นคณะกรรมการ ประตูเปิดเมื่อไขกุญแจครบจำนวน ขโมยกุญแจได้ครบเท่านั้น คอกก็เป็นของคุณ แตะกุญแจเพื่อขโมย</p>
+    <div class="toy">
+      <div class="row">
+        <button type="button" class="go" id="kRonin">Ronin, 2022 · 5/9</button>
+        <button type="button" class="go" id="kWorm">Wormhole · 13/19</button>
+      </div>
+      <div class="range">
+        <label for="kN"><span class="en">Key-holders</span><span class="th">คนถือกุญแจ</span></label>
+        <input type="range" id="kN" min="3" max="19" value="9"><output id="kNOut">9</output>
+      </div>
+      <div class="range">
+        <label for="kM"><span class="en">Keys it takes to open</span><span class="th">กุญแจที่ต้องใช้เปิด</span></label>
+        <input type="range" id="kM" min="1" max="9" value="5"><output id="kMOut">5</output>
+      </div>
+      <div class="keys" id="keyRow"></div>
+      <p class="vault" id="vault" aria-live="polite"></p>
+    </div>
+    <p class="en"><b>Ronin</b>, March 2022: robbers got 5 of the bridge's 9 keys and walked off with about $620 million. <b>Wormhole</b>, February 2022: 19 guardians, 13 needed; the thief stole no keys, a bug let a forged signature pass, about $320 million. <b>Nomad</b>, August 2022: a bad update let anybody copy somebody else's withdrawal and change the name on it; hundreds of copycats took about $190 million.</p>
+    <p class="th"><b>Ronin</b> มีนาคม 2022: โจรได้กุญแจ 5 จาก 9 ดอก ขนเงินไปราว 620 ล้านดอลลาร์ <b>Wormhole</b> กุมภาพันธ์ 2022: ผู้คุม 19 คน ต้องใช้ 13 คน โจรไม่ได้ขโมยกุญแจ แต่บั๊กทำให้ลายเซ็นปลอมผ่านได้ ราว 320 ล้านดอลลาร์ <b>Nomad</b> สิงหาคม 2022: อัปเดตที่พลาดทำให้ใครก็ลอกใบถอนเงินของคนอื่นแล้วเปลี่ยนชื่อได้ คนลอกตามเป็นร้อย เอาไปราว 190 ล้านดอลลาร์</p>
+
+    <h3><span class="en">Seven ways across, side by side</span><span class="th">เจ็ดทางข้าม เทียบกัน</span></h3>
+    <p class="en">Every way across asks you to trust somebody. Press a button to see who.</p>
+    <p class="th">ทุกทางข้ามต้องไว้ใจใครสักคน กดปุ่มเพื่อดูว่าใคร</p>
+    <div class="toy">
+      <div class="ways" id="ways"></div>
+      <svg id="waySvg" viewBox="0 0 680 240" role="img" aria-label="Diagram of how this way crosses"></svg>
+      <div class="trust" id="wayText" aria-live="polite"></div>
+    </div>
+
+    <h3><span class="en">Kinfolk of the stove</span><span class="th">ญาติของเตา</span></h3>
+    <p class="en">"Write it once, cook it anywhere" is an old idea. ChainsAtlas brought it to blockchains. Its cousins:</p>
+    <p class="th">"เขียนครั้งเดียว ทำที่ไหนก็ได้" เป็นความคิดเก่า ChainsAtlas เอามาใช้กับบล็อกเชน ญาติ ๆ ของมัน:</p>
+    <div class="kin">
+      <div><b>Java, 1995</b><span class="en">Sun's slogan was "write once, run anywhere." One pretend computer on every desk.</span><span class="th">สโลแกนของ Sun คือ "เขียนครั้งเดียว รันได้ทุกที่" คอมพิวเตอร์จำลองเครื่องเดียวบนทุกโต๊ะ</span></div>
+      <div><b>WebAssembly, 2017</b><span class="en">One stove built into every web browser. Several blockchains cook with it too.</span><span class="th">เตาเดียวที่ติดมากับทุกเว็บเบราว์เซอร์ บล็อกเชนหลายสายก็ใช้เตานี้</span></div>
+      <div><b>Cartesi</b><span class="en">Carries a whole Linux computer (on RISC-V words) to the blockchain, and only checks the cookin' if somebody hollers foul.</span><span class="th">ยกคอมพิวเตอร์ Linux ทั้งเครื่อง (ใช้คำสั่ง RISC-V) ไปไว้บนบล็อกเชน และตรวจการทำอาหารเฉพาะตอนมีคนร้องว่าโกง</span></div>
+      <div><b>RISC Zero</b><span class="en">Cook once, hand out a receipt anybody can check without re-cookin' (a zero-knowledge proof).</span><span class="th">ทำครั้งเดียว แล้วแจกใบเสร็จที่ใครก็ตรวจได้โดยไม่ต้องทำซ้ำ (zero-knowledge proof)</span></div>
+    </div>
+  </section>
+
+  <!-- 7 status -->
+  <section id="status">
+    <h2><svg viewBox="0 0 52 52" aria-hidden="true"><rect x="8" y="6" width="36" height="40" rx="3" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5"/><path d="M15 17l4 4 8-8M15 31l4 4 8-8" fill="none" stroke="var(--green)" stroke-width="3"/><path d="M30 19h8M30 33h8" stroke="var(--ink)" stroke-width="2.5"/></svg>
+      <span class="en">Where ChainsAtlas stands</span><span class="th">ChainsAtlas ตอนนี้</span></h2>
+    <table>
+      <tbody>
+        <tr><th><span class="en">Who</span><span class="th">ใคร</span></th><td><span class="en">ChainsAtlas Labs, Singapore. Whitepaper by Ayoub Ben Chaliah, Jan Hanken and Marcos Medeiros.</span><span class="th">ChainsAtlas Labs สิงคโปร์ เอกสารเขียนโดย Ayoub Ben Chaliah, Jan Hanken และ Marcos Medeiros</span></td></tr>
+        <tr><th><span class="en">Whitepaper</span><span class="th">เอกสาร</span></th><td><span class="en">15 August 2022, marked a work in progress</span><span class="th">15 สิงหาคม 2022 ระบุว่ายังทำไม่เสร็จ</span></td></tr>
+        <tr><th>aelf</th><td><span class="en">Another blockchain; signed on to use it, January 2024</span><span class="th">บล็อกเชนอีกสายหนึ่ง ตกลงใช้ร่วมกัน มกราคม 2024</span></td></tr>
+        <tr><th>GO</th><td><span class="en">VS Code plug-in, v0.5.0-beta; its GitHub page last changed May 2024</span><span class="th">ปลั๊กอิน VS Code รุ่น v0.5.0-beta หน้า GitHub แก้ล่าสุดพฤษภาคม 2024</span></td></tr>
+        <tr><th><span class="en">Website</span><span class="th">เว็บไซต์</span></th><td><span class="en">chainsatlas.com answered "not found" on 29 September 2026</span><span class="th">chainsatlas.com ตอบว่า "ไม่พบหน้า" เมื่อ 29 กันยายน 2026</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- words -->
+  <section id="words">
+    <h2><span class="en">Words</span><span class="th">คำศัพท์</span></h2>
+    <dl class="gloss" id="gloss"></dl>
+  </section>
+
+  <section id="sources">
+    <h2><span class="en">Sources</span><span class="th">แหล่งที่มา</span></h2>
+    <ol class="src">
+      <li>Ben Chaliah, Hanken, Medeiros, "ChainsAtlas: A Multi-Chain Interoperability Network," 15 Aug 2022. <a href="https://github.com/ChainsAtlas/whitepaper">github.com/ChainsAtlas/whitepaper</a> (chain profiles §2, segmentation and execution transfer §3.1–3.2, Pythian weights §3.4, chained submission and α §4.1, tokens §8)</li>
+      <li>ChainsAtlas GO VS Code README, v0.5.0-beta (the sum recipe). <a href="https://github.com/ChainsAtlas/chainsatlas-go-vscode">github.com/ChainsAtlas/chainsatlas-go-vscode</a></li>
+      <li>aelf, "aelf Partners with ChainsAtlas to Pioneer Interoperability in Blockchain," Jan 2024. <a href="https://blog.aelf.com/posts/aelf-chainsatlas-partnership">blog.aelf.com</a></li>
+      <li>DLX, the Hennessy &amp; Patterson teaching processor. <a href="https://en.wikipedia.org/wiki/DLX">en.wikipedia.org/wiki/DLX</a></li>
+      <li>Rekt: <a href="https://rekt.news/ronin-rekt">Ronin</a> · <a href="https://rekt.news/wormhole-rekt">Wormhole</a> · <a href="https://rekt.news/nomad-rekt">Nomad</a>. Wormhole guardians: <a href="https://wormhole.com/docs/protocol/infrastructure/guardians/">wormhole.com/docs</a></li>
+      <li><a href="https://ibcprotocol.dev/">IBC</a> · <a href="https://wiki.polkadot.network/">Polkadot wiki</a> · <a href="https://docs.chain.link/ccip">Chainlink CCIP</a> · <a href="https://docs.layerzero.network/v2">LayerZero v2</a> · <a href="https://docs.axelar.dev/">Axelar</a></li>
+      <li><a href="https://webassembly.org/">WebAssembly</a> · <a href="https://cartesi.io/">Cartesi</a> · <a href="https://risczero.com/">RISC Zero</a></li>
+    </ol>
+  </section>
+</main>
+
+<footer><a href="https://nanobotco.github.io/all-factored/">All Factored</a> · <a href="https://nanobotco.github.io/indras-net/">Indra's Net, Drawn</a> · <a href="https://motdang.net/">motdang.net</a> · CC BY 4.0 / MIT</footer>
+</div>
+
+<script>
+(() => {
+const root = document.querySelector('[data-root]');
+let L = 'en';
+try { const s = localStorage.getItem('chains-lang'); if (s === 'th' || s === 'en') L = s; } catch (e) {}
+const T = (en, th) => L === 'th' ? th : en;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const renders = [];
+
+/* ---------- pretend towns ---------- */
+const TOWNS = [
+  {id:'bc', en:'Big Creek',        th:'บ้านห้วยใหญ่', fee:9, secs:12, card:8, keep:900, spread:8, x:100, y:80},
+  {id:'hh', en:'Hog Holler',       th:'บ้านหมูป่า',   fee:1, secs:2,  card:3, keep:21,  spread:3, x:120, y:228},
+  {id:'rr', en:'Rattlesnake Ridge',th:'ดอยงูกะปะ',    fee:4, secs:5,  card:4, keep:150, spread:6, x:238, y:150},
+  {id:'fl', en:'Frog Level',       th:'บ้านหนองกบ',   fee:2, secs:20, card:6, keep:400, spread:7, x:560, y:84},
+  {id:'pt', en:'Possum Trot',      th:'บ้านกระรอก',   fee:6, secs:1,  card:5, keep:60,  spread:4, x:540, y:228},
+];
+const tn = t => T(t.en, t.th);
+const cents = c => c >= 100 ? '$' + (c / 100).toFixed(2) : c + '¢';
+
+/* ---------- little drawings ---------- */
+const house = (x, y) => `<path d="M${x-16} ${y} l16 -16 l16 16 v18 h-32z" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5"/><rect x="${x-5}" y="${y+6}" width="10" height="12" fill="var(--wood)"/>`;
+const book = (x, y) => `<rect x="${x}" y="${y}" width="16" height="20" rx="2" fill="var(--wood)" stroke="var(--ink)" stroke-width="2"/><path d="M${x+4} ${y+6}h8M${x+4} ${y+11}h8" stroke="var(--gold)" stroke-width="2"/>`;
+const stove = (x, y) => `<rect x="${x}" y="${y}" width="22" height="18" rx="2" fill="var(--ink)"/><rect x="${x+16}" y="${y-10}" width="5" height="11" fill="var(--ink)"/><circle cx="${x+10}" cy="${y+9}" r="5" fill="var(--rust)"/><path d="M${x+10} ${y+5}c-2 2-2 4 0 6 2-2 2-4 0-6z" fill="var(--gold)"/>`;
+const mule = (fill = 'var(--wood)', dash = '') => `<g><ellipse cx="0" cy="0" rx="20" ry="11" fill="${fill}" stroke="var(--ink)" stroke-width="2.5" ${dash}/><path d="M16 -6 l14 -10 l6 6 l-10 10z" fill="${fill}" stroke="var(--ink)" stroke-width="2.5" ${dash}/><path d="M28 -16 l-2 -12 l5 10M32 -14 l2 -12 l1 11" stroke="var(--ink)" stroke-width="2.5" fill="none"/><path d="M-12 9v14M-4 10v13M6 10v13M14 9v14" stroke="var(--ink)" stroke-width="3"/><path d="M-20 -2 q-8 4 -6 14" stroke="var(--ink)" stroke-width="2.5" fill="none"/></g>`;
+const label = (x, y, s, anchor = 'middle', size = 21) => `<text x="${x}" y="${y}" text-anchor="${anchor}" font-size="${size}" font-weight="700" fill="var(--ink)" font-family="Atkinson Hyperlegible, Sarabun, sans-serif">${esc(s)}</text>`;
+const creek = (w, h) => `<path d="M${w*0.47} 0 C ${w*0.4} ${h*0.3}, ${w*0.6} ${h*0.45}, ${w*0.52} ${h*0.68} S ${w*0.5} ${h*0.92}, ${w*0.57} ${h}" fill="none" stroke="var(--creek)" stroke-width="26" stroke-linecap="round"/>`;
+
+/* ---------- hero ---------- */
+let stoveMode = true;
+function renderHero() {
+  const W = 680, H = 300;
+  let s = creek(W, H);
+  s += `<path d="M280 120 h110" stroke="var(--wood)" stroke-width="10"/><path d="M280 112 h110" stroke="var(--ink)" stroke-width="2"/>`;
+  s += `<rect x="248" y="96" width="44" height="44" fill="none" stroke="var(--wood)" stroke-width="4" stroke-dasharray="6 4"/>`;
+  TOWNS.forEach(t => {
+    s += house(t.x, t.y - 18) + book(t.x + 20, t.y - 22);
+    s += `<g class="stove ${stoveMode ? '' : 'off'}">${stove(t.x - 42, t.y - 14)}</g>`;
+    s += `<g class="card ${stoveMode ? '' : 'off'}"><rect x="${t.x - 40}" y="${t.y - 42}" width="18" height="13" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/></g>`;
+    s += label(t.x, t.y + 24, tn(t));
+  });
+  const at = stoveMode ? 'translate(-80px,-80px)' : 'translate(270px,122px)';
+  s += `<g class="mule" style="transform:${at}">${mule()}</g>`;
+  s += `<g class="paper ${stoveMode ? 'off' : ''}" transform="translate(470 150) scale(.8)">${mule('var(--panel)', 'stroke-dasharray="5 3"')}</g>`;
+  $('map').innerHTML = s;
+  $('heroSay').innerHTML = stoveMode
+    ? T('Same stove in every town. Only the recipe card travels, and it cooks the same everywhere.', 'เตาเดียวกันในทุกหมู่บ้าน มีแค่การ์ดสูตรที่เดินทาง และทำที่ไหนก็ได้รสเดียวกัน')
+    : T('The mule stays penned by the bridge. Frog Level gets a <b>paper mule</b> to trade with.', 'ล่อถูกขังไว้ข้างสะพาน บ้านหนองกบได้ <b>ล่อกระดาษ</b> ไว้ซื้อขาย');
+}
+$('heroSwitch').addEventListener('click', () => {
+  stoveMode = !stoveMode;
+  $('heroSwitch').setAttribute('aria-checked', stoveMode);
+  renderHero();
+});
+renders.push(renderHero);
+
+/* ---------- books ---------- */
+const DEEDS = [
+  ['Earl owes Mae 3 eggs', 'เอิร์ลติดไข่เม 3 ฟอง'],
+  ['Opal sold Clyde a goat', 'โอปอลขายแพะให้ไคลด์'],
+  ['Junior paid $2 for gas', 'จูเนียร์จ่ายค่าน้ำมัน 2 ดอลลาร์'],
+  ['Darlene lent out her truck', 'ดาร์ลีนให้ยืมรถกระบะ'],
+  ['Mae traded jam for honey', 'เมแลกแยมกับน้ำผึ้ง'],
+  ['Clyde fixed the church roof', 'ไคลด์ซ่อมหลังคาโบสถ์'],
+];
+const ledgers = {bc: [0, 1], fl: [2], hh: [3, 4]};
+let lastWrite = null, deedN = 5;
+function renderBooks() {
+  $('bookRow').innerHTML = ['bc', 'fl', 'hh'].map(id => {
+    const t = TOWNS.find(x => x.id === id);
+    const lines = ledgers[id].map((d, i) => `<li class="${lastWrite === id && i === ledgers[id].length - 1 ? 'new' : ''}">${esc(T(DEEDS[d][0], DEEDS[d][1]))}</li>`).join('');
+    return `<div class="book"><h4>${esc(tn(t))}</h4><ol>${lines}</ol><button type="button" class="go" data-w="${id}">${T('Write a line', 'จดหนึ่งบรรทัด')}</button></div>`;
+  }).join('');
+  if (lastWrite) {
+    const t = TOWNS.find(x => x.id === lastWrite);
+    const others = ['bc', 'fl', 'hh'].filter(i => i !== lastWrite).map(i => tn(TOWNS.find(x => x.id === i)));
+    $('bookSay').innerHTML = T(`${esc(tn(t))} wrote it down. ${esc(others.join(' and '))} ain't heard a word.`, `${esc(tn(t))} จดแล้ว ${esc(others.join(' กับ '))} ไม่รู้อะไรเลย`);
+  } else $('bookSay').textContent = T('Write in one book and watch the other two.', 'จดในเล่มหนึ่ง แล้วดูอีกสองเล่ม');
+}
+$('bookRow').addEventListener('click', e => {
+  const b = e.target.closest('[data-w]'); if (!b) return;
+  const id = b.dataset.w; deedN = (deedN + 1) % DEEDS.length;
+  ledgers[id].push(deedN); if (ledgers[id].length > 5) ledgers[id].shift();
+  lastWrite = id; renderBooks();
+});
+renders.push(renderBooks);
+
+/* ---------- the stove (a tiny DLX-ish machine) ---------- */
+function exec(ins, st) {
+  const r = st.r;
+  switch (ins.op) {
+    case 'LW': r[ins.a] = st.box[ins.b] ?? 0; break;
+    case 'SW': st.box[ins.a] = r[ins.b]; break;
+    case 'ADD': r[ins.a] = r[ins.b] + r[ins.c]; break;
+    case 'ADDI': r[ins.a] = (ins.b === 'r0' ? 0 : r[ins.b]) + ins.c; break;
+    case 'MULT': r[ins.a] = r[ins.b] * r[ins.c]; break;
+    case 'DIV': r[ins.a] = Math.floor(r[ins.b] / r[ins.c]); break;
+    case 'HALT': st.done = true; break;
+  }
+  st.pc++;
+}
+const show = i => ({
+  LW: `LW   ${i.a}, box${i.b}`, SW: `SW   box${i.a}, ${i.b}`, ADD: `ADD  ${i.a}, ${i.b}, ${i.c}`,
+  ADDI: `ADDI ${i.a}, ${i.b}, ${i.c}`, MULT: `MULT ${i.a}, ${i.b}, ${i.c}`, DIV: `DIV  ${i.a}, ${i.b}, ${i.c}`, HALT: 'HALT'
+}[i.op]);
+const SUM = [
+  {op:'LW', a:'r1', b:1, en:'fetch x', th:'หยิบ x'},
+  {op:'LW', a:'r2', b:2, en:'fetch y', th:'หยิบ y'},
+  {op:'ADD', a:'r3', b:'r1', c:'r2', en:'add', th:'บวก'},
+  {op:'SW', a:3, b:'r3', en:'put it away', th:'เก็บคำตอบ'},
+  {op:'HALT', en:'done', th:'เสร็จ'},
+];
+let sx = 3, sy = 4, sst;
+const fresh = (boxes) => ({pc: 0, r: {r1: 0, r2: 0, r3: 0}, box: boxes, done: false});
+function sumReset() { sst = fresh({1: sx, 2: sy, 3: 0}); $('sumTable').innerHTML = ''; }
+function renderSum() {
+  $('xOut').textContent = sx; $('yOut').textContent = sy;
+  $('sumWords').innerHTML = SUM.map((i, k) => `<li class="${k === sst.pc && !sst.done ? 'at' : ''}"><span>${esc(show(i))}</span><small>${esc(T(i.en, i.th))}</small></li>`).join('');
+  const reg = (n, v, box) => `<div class="reg${box ? ' box' : ''}"><small>${n}</small><b>${v}</b></div>`;
+  $('sumRegs').innerHTML = reg('r1', sst.r.r1) + reg('r2', sst.r.r2) + reg('r3', sst.r.r3) +
+    reg(T('box 1', 'กล่อง 1'), sst.box[1], 1) + reg(T('box 2', 'กล่อง 2'), sst.box[2], 1) + reg(T('box 3', 'กล่อง 3'), sst.box[3], 1);
+  $('sumSay').innerHTML = sst.done
+    ? T(`Done. Box 3 holds <b>${sst.box[3]}</b>. That's wrote in the town's book now.`, `เสร็จ กล่อง 3 มี <b>${sst.box[3]}</b> จดลงสมุดของหมู่บ้านแล้ว`)
+    : T(`Step ${sst.pc + 1} of ${SUM.length}. The yellow line is next.`, `ขั้นที่ ${sst.pc + 1} จาก ${SUM.length} บรรทัดสีเหลืองคือขั้นต่อไป`);
+}
+function sumAll() {
+  const rows = TOWNS.map(t => {
+    const st = fresh({1: sx, 2: sy, 3: 0});
+    while (!st.done) exec(SUM[st.pc], st);
+    const cards = Math.ceil(SUM.length / t.card);
+    return `<tr><td>${esc(tn(t))}</td><td class="n"><b>${st.box[3]}</b></td><td class="n">${cents(SUM.length * t.fee)}</td><td class="n">${cards * t.secs} ${T('sec', 'วิ')}</td></tr>`;
+  }).join('');
+  $('sumTable').innerHTML = `<table><thead><tr><th>${T('Town', 'หมู่บ้าน')}</th><th class="n">${T('Answer', 'คำตอบ')}</th><th class="n">${T('Fee', 'ค่าธรรมเนียม')}</th><th class="n">${T('Time', 'เวลา')}</th></tr></thead><tbody>${rows}</tbody></table>`;
+  $('sumSay').innerHTML = T(`Same answer, <b>${sx + sy}</b>, in all five towns. Only the bill changes.`, `คำตอบเดียวกัน <b>${sx + sy}</b> ทั้งห้าหมู่บ้าน ต่างกันแค่ค่าใช้จ่าย`);
+}
+document.querySelectorAll('[data-d]').forEach(b => b.addEventListener('click', () => {
+  const d = b.dataset.d;
+  if (d === 'x+') sx = Math.min(99, sx + 1); if (d === 'x-') sx = Math.max(0, sx - 1);
+  if (d === 'y+') sy = Math.min(99, sy + 1); if (d === 'y-') sy = Math.max(0, sy - 1);
+  sumReset(); renderSum();
+}));
+$('sumStep').addEventListener('click', () => { if (sst.done) sumReset(); else exec(SUM[sst.pc], sst); renderSum(); });
+$('sumReset').addEventListener('click', () => { sumReset(); renderSum(); });
+$('sumAll').addEventListener('click', () => { sumAll(); });
+sumReset();
+renders.push(() => { renderSum(); if ($('sumTable').innerHTML) sumAll(); });
+
+/* ---------- cards, pots and fingerprints ---------- */
+const FEED = [
+  {op:'LW', a:'r1', b:1}, {op:'LW', a:'r2', b:2}, {op:'MULT', a:'r3', b:'r1', c:'r2'},
+  {op:'ADDI', a:'r3', b:'r3', c:4}, {op:'ADDI', a:'r4', b:'r0', c:2},
+  {op:'DIV', a:'r5', b:'r3', c:'r4'}, {op:'SW', a:3, b:'r5'}, {op:'HALT'},
+];
+const CROOK = 4; // ADDI r4, r0, 2 -> 1 : one neighbor pays it all
+let fs = 5, fp = 12, crooked = false;
+async function sha(s) {
+  try {
+    const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+    return [...new Uint8Array(d)].map(b => b.toString(16).padStart(2, '0')).join('');
+  } catch (e) {
+    let h = 2166136261; for (const c of s) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; }
+    return h.toString(16).padStart(8, '0');
+  }
+}
+let slipJob = 0;
+async function renderSlips() {
+  const job = ++slipJob;
+  $('sOut').textContent = fs; $('pOut').textContent = fp;
+  const size = +$('cardSize').value; $('cardSizeOut').textContent = size;
+  const truth = FEED, used = FEED.map((i, k) => k === CROOK && crooked ? {...i, c: 1} : i);
+  const chunk = a => { const o = []; for (let i = 0; i < a.length; i += size) o.push(a.slice(i, i + size)); return o; };
+  const hc = chunk(truth), uc = chunk(used);
+  const text = c => c.map(show).join('\n');
+  const signed = await Promise.all(hc.map(c => sha(text(c))));
+  const now = await Promise.all(uc.map(c => sha(text(c))));
+  if (job !== slipJob) return;
+  const st = fresh({1: fs, 2: fp, 3: 0});
+  let caught = -1, html = '';
+  uc.forEach((c, k) => {
+    const bad = k > 0 && signed[k] !== now[k];
+    if (bad && caught < 0) caught = k;
+    if (caught < 0) c.forEach(i => exec(i, st));
+    const pot = Object.entries(st.r).filter(([, v]) => v).map(([n, v]) => `${n}=${v}`).join(' ') || '—';
+    const lines = c.map((i, j) => `<li class="${crooked && k * size + j === CROOK ? 'crook' : ''}">${esc(show(i))}</li>`).join('');
+    html += `<div class="slip${bad ? ' caught' : ''}"><h4>${T('Card', 'การ์ด')} ${k + 1}</h4><ol start="${k * size + 1}">${lines}</ol>` +
+      (caught >= 0 && k >= caught ? `<div class="pot bad">${bad ? T('Fingerprint don\'t match. Refused.', 'ลายนิ้วมือไม่ตรง ไม่รับ') : T('Never cooked.', 'ไม่ได้ทำ')}</div>`
+        : `<div class="pot">${T('pot', 'หม้อ')}: ${pot}</div>`) +
+      (k < uc.length - 1 ? `<div class="fp">${T('next card', 'ใบถัดไป')}: ${signed[k + 1].slice(0, 8)}</div>` : '') +
+      (bad ? `<div class="fp bad">${T('this card', 'ใบนี้')}: ${now[k].slice(0, 8)}</div>` : '') + `</div>`;
+  });
+  $('slips').innerHTML = html;
+  const bill = fs * fp + 4;
+  $('slipSay').innerHTML = caught >= 0
+    ? T(`Card ${caught} said card ${caught + 1} would print <b>${signed[caught].slice(0, 8)}</b>; the swapped card prints <b class="bad">${now[caught].slice(0, 8)}</b>. Caught before it cooked.`,
+        `การ์ด ${caught} บอกว่าการ์ด ${caught + 1} ต้องได้ <b>${signed[caught].slice(0, 8)}</b> แต่การ์ดที่สลับมาได้ <b class="bad">${now[caught].slice(0, 8)}</b> จับได้ก่อนลงหม้อ`)
+    : T(`${uc.length} card${uc.length > 1 ? 's' : ''}. Bill $${bill}; each neighbor pays <b>$${st.box[3]}</b>. Every fingerprint matches.`,
+        `${uc.length} ใบ ค่าอาหาร $${bill} แต่ละคนจ่าย <b>$${st.box[3]}</b> ลายนิ้วมือตรงทุกใบ`);
+}
+document.querySelectorAll('[data-f]').forEach(b => b.addEventListener('click', () => {
+  const d = b.dataset.f;
+  if (d === 's+') fs = Math.min(40, fs + 1); if (d === 's-') fs = Math.max(0, fs - 1);
+  if (d === 'p+') fp = Math.min(99, fp + 1); if (d === 'p-') fp = Math.max(0, fp - 1);
+  renderSlips();
+}));
+$('cardSize').addEventListener('input', renderSlips);
+$('crook').addEventListener('click', () => {
+  crooked = !crooked; $('crook').setAttribute('aria-pressed', crooked);
+  $('crook').innerHTML = crooked ? `<span class="en">Put the true card back</span><span class="th">เอาการ์ดจริงคืน</span>` : `<span class="en">Slip in a crooked card</span><span class="th">แอบสลับการ์ดปลอม</span>`;
+  renderSlips();
+});
+renders.push(renderSlips);
+
+/* ---------- strategist ---------- */
+function renderPlan() {
+  const a = +$('alpha').value / 10, K = +$('minKeep').value, S = +$('minSpread').value;
+  $('alphaOut').textContent = a.toFixed(1); $('minKeepOut').textContent = K; $('minSpreadOut').textContent = S;
+  const n = FEED.length;
+  const rows = TOWNS.map(t => ({t, ok: t.keep >= K && t.spread >= S, cost: n * t.fee, time: Math.ceil(n / t.card) * t.secs}));
+  const ok = rows.filter(r => r.ok);
+  let win = null;
+  if (ok.length) {
+    const cm = Math.max(...ok.map(r => r.cost)), tm = Math.max(...ok.map(r => r.time));
+    ok.forEach(r => r.score = a * r.time / tm + (1 - a) * r.cost / cm);
+    win = ok.reduce((b, r) => r.score < b.score ? r : b);
+  }
+  $('planTable').innerHTML = `<table><thead><tr><th>${T('Town', 'หมู่บ้าน')}</th><th class="n">${T('Fee a line', 'ค่า/บรรทัด')}</th><th class="n">${T('Lines a slip', 'บรรทัด/ใบ')}</th><th class="n">${T('Sec a slip', 'วิ/ใบ')}</th><th class="n">${T('Book-keepers', 'ผู้ตรวจ')}</th><th class="n voted">${T('Spread', 'กระจาย')}</th><th class="n">${T('Job', 'งานนี้')}</th></tr></thead><tbody>` +
+    rows.map(r => `<tr class="${r === win ? 'win' : r.ok ? '' : 'out'}"><td>${r === win ? '★ ' : ''}${esc(tn(r.t))}</td><td class="n">${r.t.fee}¢</td><td class="n">${r.t.card}</td><td class="n">${r.t.secs}</td><td class="n">${r.t.keep}</td><td class="n voted">${r.t.spread}</td><td class="n">${cents(r.cost)} · ${r.time}${T('s', 'วิ')}</td></tr>`).join('') + '</tbody></table>';
+  $('planSay').innerHTML = win
+    ? T(`The strategist picks <b>${esc(tn(win.t))}</b>: the 8-line feed bill for ${cents(win.cost)}, done in ${win.time} seconds.`, `นักวางแผนเลือก <b>${esc(tn(win.t))}</b>: สูตรค่าอาหาร 8 บรรทัด ${cents(win.cost)} เสร็จใน ${win.time} วินาที`)
+    : T('<span class="bad">No town fits.</span> Ease off a lever.', '<span class="bad">ไม่มีหมู่บ้านไหนเข้าเงื่อนไข</span> ลองผ่อนคันโยกลงหน่อย');
+}
+['alpha', 'minKeep', 'minSpread'].forEach(id => $(id).addEventListener('input', renderPlan));
+renders.push(renderPlan);
+
+/* ---------- judges ---------- */
+const J0 = [
+  {en:'Earl', th:'เอิร์ล', stake:50}, {en:'Darlene', th:'ดาร์ลีน', stake:30}, {en:'Junior', th:'จูเนียร์', stake:10},
+  {en:'Mae', th:'เม', stake:40}, {en:'Clyde', th:'ไคลด์', stake:20}, {en:'Opal', th:'โอปอล', stake:25}, {en:'Buck', th:'บัค', stake:60, crook:true},
+];
+let judges, picked = [], lastVotes = {}, tally = null;
+function jReset() { judges = J0.map(j => ({...j, rec: 0, picks: 0})); judges[6].stake = +$('buck').value; picked = []; lastVotes = {}; tally = null; }
+function round() {
+  const ms = Math.max(...judges.map(j => j.stake)) || 1, mr = Math.max(...judges.map(j => j.rec));
+  const scored = judges.map((j, i) => ({i, s: .4 * j.stake / ms + .2 * Math.random() + .4 * (mr ? j.rec / mr : 0)}));
+  picked = scored.sort((a, b) => b.s - a.s).slice(0, 3).map(x => x.i);
+  lastVotes = {};
+  picked.forEach(i => { judges[i].picks++; lastVotes[i] = judges[i].crook ? Math.random() > .2 ? 'bad' : 'good' : 'good'; });
+  const good = picked.filter(i => lastVotes[i] === 'good').length;
+  const verdict = good >= 2 ? 'good' : 'bad';
+  picked.forEach(i => { if (lastVotes[i] === verdict) judges[i].rec++; });
+  return verdict;
+}
+function renderJudges() {
+  $('buckOut').textContent = $('buck').value;
+  const ms = Math.max(...judges.map(j => j.stake)) || 1, mr = Math.max(1, ...judges.map(j => j.rec));
+  $('judgeRow').innerHTML = judges.map((j, i) => `<div class="judge${picked.includes(i) ? ' picked' : ''}"><b>${esc(T(j.en, j.th))}</b>${j.crook ? ' <span class="bad">' + T('crooked', 'ขี้โกง') + '</span>' : ''}
+    <div>${T('coins', 'เหรียญ')} ${j.stake}</div><div class="bar"><i style="width:${100 * j.stake / ms}%"></i></div>
+    <div>${T('record', 'ประวัติ')} ${j.rec}</div><div class="bar rec"><i style="width:${100 * j.rec / mr}%"></i></div>
+    ${lastVotes[i] ? `<div class="vote ${lastVotes[i] === 'good' ? 'good' : 'bad'}">${lastVotes[i] === 'good' ? T('votes: sound', 'โหวต: ผ่าน') : T('votes: reject', 'โหวต: ไม่ผ่าน')}</div>` : ''}</div>`).join('');
+  const b = judges[6];
+  if (tally) $('judgeSay').innerHTML = T(`20 rounds: the good plan passed <b>${tally.pass}</b> times. Buck got picked ${tally.buck} times; his record is ${b.rec}, the best straight judge's is ${Math.max(...judges.slice(0, 6).map(j => j.rec))}.`,
+    `20 รอบ: แผนดีผ่าน <b>${tally.pass}</b> ครั้ง บัคถูกเลือก ${tally.buck} ครั้ง ประวัติเขา ${b.rec} กรรมการซื่อสัตย์ที่ดีที่สุดได้ ${Math.max(...judges.slice(0, 6).map(j => j.rec))}`);
+  else if (picked.length) {
+    const good = picked.filter(i => lastVotes[i] === 'good').length;
+    $('judgeSay').innerHTML = good >= 2 ? T(`${good} of 3 say sound. The plan cooks.`, `${good} ใน 3 บอกว่าผ่าน แผนได้ทำ`) : T(`Only ${good} of 3 say sound. The good plan got blocked.`, `ผ่านแค่ ${good} ใน 3 แผนดีถูกขวาง`);
+  } else $('judgeSay').textContent = T('Nobody picked yet.', 'ยังไม่ได้เลือกใคร');
+}
+$('jDraw').addEventListener('click', () => { tally = null; round(); renderJudges(); });
+$('j20').addEventListener('click', () => { let pass = 0, buck = 0; for (let k = 0; k < 20; k++) { if (round() === 'good') pass++; if (picked.includes(6)) buck++; } tally = {pass, buck}; renderJudges(); });
+$('jReset').addEventListener('click', () => { jReset(); renderJudges(); });
+$('buck').addEventListener('input', () => { judges[6].stake = +$('buck').value; renderJudges(); });
+jReset();
+renders.push(renderJudges);
+
+/* ---------- mule pen ---------- */
+let pen = {state: 'free'}; // free | penned | robbed
+function renderPen() {
+  const W = 680, H = 220;
+  let s = `<path d="M330 0 C 300 70, 390 120, 350 220" fill="none" stroke="var(--creek)" stroke-width="40"/>`;
+  s += label(120, 26, tn(TOWNS[0])) + label(560, 26, tn(TOWNS[3]));
+  s += `<rect x="170" y="70" width="120" height="100" fill="none" stroke="var(--wood)" stroke-width="5"/>`;
+  for (let x = 170; x <= 290; x += 20) s += `<path d="M${x} 70v100" stroke="var(--wood)" stroke-width="3"/>`;
+  s += label(230, 196, T('the pen', 'คอก'));
+  if (pen.state === 'free') s += `<g transform="translate(80 130)">${mule()}</g>`;
+  if (pen.state === 'penned') s += `<g transform="translate(225 130)">${mule()}</g>`;
+  if (pen.state !== 'free') {
+    const worth = pen.state === 'robbed';
+    s += `<g transform="translate(540 125)" opacity="${worth ? .45 : 1}">${mule('var(--panel)', 'stroke-dasharray="5 3"')}</g>`;
+    s += label(540, 190, worth ? T('backed by nothin\'', 'ไม่มีอะไรค้ำ') : T('paper mule', 'ล่อกระดาษ'));
+  }
+  if (pen.state === 'robbed') s += `<g transform="translate(100 120)">${mule()}</g>` + label(100, 180, T('rustlers', 'โจร'));
+  $('pen').innerHTML = s;
+  $('penSay').innerHTML = {
+    free: T('Your mule, on your side of the creek.', 'ล่อของคุณ อยู่ฝั่งคุณ'),
+    penned: T('Mule locked in the pen. Paper mule minted in Frog Level. One mule, two places, as long as the pen holds.', 'ล่อถูกขังในคอก ล่อกระดาษออกที่บ้านหนองกบ ล่อตัวเดียวอยู่สองที่ ตราบที่คอกยังแน่น'),
+    robbed: T('<span class="bad">Pen\'s empty.</span> Every paper mule in Frog Level is backed by nothin\'. That\'s how most of the big bridge losses went.', '<span class="bad">คอกว่าง</span> ล่อกระดาษทุกตัวที่บ้านหนองกบไม่มีอะไรค้ำแล้ว ความเสียหายใหญ่ ๆ ของสะพานส่วนมากเป็นแบบนี้'),
+  }[pen.state];
+}
+$('penIn').addEventListener('click', () => { if (pen.state === 'free') pen.state = 'penned'; renderPen(); });
+$('penOut').addEventListener('click', () => { if (pen.state === 'penned') pen.state = 'free'; else if (pen.state === 'robbed') pen.state = 'free'; renderPen(); });
+$('penRob').addEventListener('click', () => { if (pen.state === 'penned') pen.state = 'robbed'; else $('penSay').innerHTML = T('Nothin\' in the pen to rustle yet.', 'ในคอกยังไม่มีอะไรให้ปล้น'); if (pen.state === 'robbed') renderPen(); });
+renders.push(renderPen);
+
+/* ---------- key rack ---------- */
+let stolen = new Set();
+const keyIcon = `<svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="12" cy="20" r="8" fill="none" stroke="var(--ink)" stroke-width="4"/><path d="M20 20h16M30 20v7M35 20v5" stroke="var(--ink)" stroke-width="4"/></svg>`;
+function renderKeys() {
+  const n = +$('kN').value; $('kM').max = n; if (+$('kM').value > n) $('kM').value = n;
+  const m = +$('kM').value; $('kNOut').textContent = n; $('kMOut').textContent = m;
+  stolen = new Set([...stolen].filter(k => k < n));
+  $('keyRow').innerHTML = Array.from({length: n}, (_, k) => `<button type="button" class="key" data-k="${k}" aria-pressed="${stolen.has(k)}" aria-label="${T('key', 'กุญแจ')} ${k + 1}">${keyIcon}</button>`).join('');
+  const open = stolen.size >= m;
+  $('vault').innerHTML = open ? `<span class="bad">${T(`Gate's open. ${stolen.size} of ${n} keys was plenty.`, `ประตูเปิด ${stolen.size} จาก ${n} ดอกก็พอแล้ว`)}</span>`
+    : T(`Stolen ${stolen.size}. Need ${m - stolen.size} more.`, `ขโมยได้ ${stolen.size} ต้องอีก ${m - stolen.size}`);
+}
+$('keyRow').addEventListener('click', e => { const b = e.target.closest('[data-k]'); if (!b) return; const k = +b.dataset.k; stolen.has(k) ? stolen.delete(k) : stolen.add(k); renderKeys(); });
+['kN', 'kM'].forEach(id => $(id).addEventListener('input', renderKeys));
+$('kRonin').addEventListener('click', () => { $('kN').value = 9; $('kM').max = 9; $('kM').value = 5; stolen = new Set(); renderKeys(); });
+$('kWorm').addEventListener('click', () => { $('kN').value = 19; $('kM').max = 19; $('kM').value = 13; stolen = new Set(); renderKeys(); });
+renders.push(renderKeys);
+
+/* ---------- seven ways ---------- */
+const arrow = (x1, y1, x2, y2, c = 'var(--ink)') => `<path d="M${x1} ${y1} L${x2} ${y2}" stroke="${c}" stroke-width="3" marker-end="url(#ah)"/>`;
+const town = (x, y, s) => house(x, y - 10) + book(x + 20, y - 14) + label(x, y + 30, s);
+const eye = (x, y) => `<ellipse cx="${x}" cy="${y}" rx="14" ry="8" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5"/><circle cx="${x}" cy="${y}" r="4" fill="var(--ink)"/>`;
+const person = (x, y, c = 'var(--gold)') => `<circle cx="${x}" cy="${y - 12}" r="7" fill="${c}" stroke="var(--ink)" stroke-width="2"/><path d="M${x - 10} ${y + 8}q10 -18 20 0z" fill="${c}" stroke="var(--ink)" stroke-width="2"/>`;
+const A = () => tn(TOWNS[0]), B = () => tn(TOWNS[3]);
+const WAYS = [
+  {id:'bridge', en:'Pawn-shop bridge', th:'สะพานโรงรับจำนำ',
+    draw: () => creek(680, 240) + town(110, 120, A()) + town(570, 120, B()) + `<g transform="translate(230 170) scale(.8)">${mule()}</g><rect x="195" y="140" width="72" height="60" fill="none" stroke="var(--wood)" stroke-width="4"/>` + `<g transform="translate(470 175) scale(.8)">${mule('var(--panel)', 'stroke-dasharray="5 3"')}</g>` + [0,1,2,3,4].map(k => person(290 + k * 26, 50)).join('') + label(342, 90, T('committee with keys', 'กรรมการถือกุญแจ'), 'middle', 19),
+    en2:'Lock the thing in one town, print an IOU in the other. Wormhole, Ronin and most token bridges.', th2:'ขังของไว้หมู่บ้านหนึ่ง พิมพ์ใบรับรองอีกหมู่บ้าน Wormhole, Ronin และสะพานโทเคนส่วนใหญ่',
+    trust:['the committee holdin\' the keys', 'กรรมการที่ถือกุญแจ'], since:['2020s, all over', 'ตั้งแต่ราวปี 2020 มีทั่วไป']},
+  {id:'ibc', en:'Cosmos IBC', th:'Cosmos IBC',
+    draw: () => creek(680, 240) + town(110, 120, A()) + town(570, 120, B()) + `<rect x="150" y="60" width="70" height="44" rx="4" fill="var(--panel)" stroke="var(--blue)" stroke-width="3"/>` + label(185, 88, B().split(' ')[0], 'middle', 16) + `<rect x="460" y="60" width="70" height="44" rx="4" fill="var(--panel)" stroke="var(--blue)" stroke-width="3"/>` + label(495, 88, A().split(' ')[0], 'middle', 16) + arrow(200, 175, 480, 175) + `<rect x="320" y="160" width="40" height="28" fill="var(--gold)" stroke="var(--ink)" stroke-width="2"/>` + label(340, 225, T('each keeps the other\'s headlines', 'ต่างคนเก็บพาดหัวของอีกฝั่ง'), 'middle', 19),
+    en2:'Each town keeps a little copy of the other town\'s headlines (a light client) and checks the postmark itself. No middleman.', th2:'แต่ละหมู่บ้านเก็บสำเนาพาดหัวข่าวของอีกหมู่บ้านไว้ (light client) แล้วตรวจตราไปรษณีย์เอง ไม่มีคนกลาง',
+    trust:['the other town\'s own book-keepers', 'ผู้ตรวจบัญชีของหมู่บ้านโน้นเอง'], since:['2021, across the Cosmos towns', 'ปี 2021 ในหมู่บ้านเครือ Cosmos']},
+  {id:'dot', en:'Polkadot', th:'Polkadot',
+    draw: () => { let s = `<circle cx="340" cy="120" r="44" fill="var(--gold)" stroke="var(--ink)" stroke-width="3"/>` + `<path d="M325 105 l15 -8 l15 8 v14 q-15 16 -30 0z" fill="var(--panel)" stroke="var(--ink)" stroke-width="2.5"/>`; [[110, 60], [110, 190], [570, 60], [570, 190], [340, 222]].forEach(([x, y], k) => { s += `<path d="M340 120 L${x} ${y}" stroke="var(--ink)" stroke-width="2" stroke-dasharray="4 4"/>` + house(x, y - 18); }); return s + label(340, 30, T('one sheriff\'s office', 'สำนักนายอำเภอเดียว'), 'middle', 20); },
+    en2:'One big sheriff\'s office (the relay chain) guards every town on its list (parachains). They pass notes in one shared format, XCM.', th2:'สำนักนายอำเภอใหญ่แห่งเดียว (relay chain) ดูแลทุกหมู่บ้านในสังกัด (parachain) ส่งโน้ตถึงกันด้วยแบบฟอร์มเดียวกัน ชื่อ XCM',
+    trust:['the sheriff\'s deputies (relay-chain validators)', 'ลูกน้องนายอำเภอ (ผู้ตรวจของ relay chain)'], since:['parachains since December 2021', 'parachain ตั้งแต่ธันวาคม 2021']},
+  {id:'ccip', en:'Chainlink CCIP', th:'Chainlink CCIP',
+    draw: () => creek(680, 240) + town(110, 120, A()) + town(570, 120, B()) + arrow(180, 160, 490, 160) + person(340, 150, 'var(--blue)') + eye(290, 60) + eye(340, 50) + eye(390, 60) + label(340, 95, T('second crew watchin\'', 'ทีมที่สองเฝ้าดู'), 'middle', 19),
+    en2:'A hired messenger outfit (Chainlink\'s oracle networks) carries the note, and a separate crew watches for funny business and can pull the brake.', th2:'บริษัทรับส่งข่าวที่จ้างมา (เครือข่าย oracle ของ Chainlink) ถือโน้ตไป และมีอีกทีมแยกต่างหากคอยเฝ้าดูความผิดปกติ ดึงเบรกได้',
+    trust:['both crews', 'ทั้งสองทีม'], since:['2023', 'ปี 2023']},
+  {id:'lz', en:'LayerZero', th:'LayerZero',
+    draw: () => creek(680, 240) + town(110, 120, A()) + town(570, 120, B()) + arrow(180, 160, 490, 160) + person(340, 150) + [0, 1, 2].map(k => `<rect x="${470 + k * 36}" y="30" width="28" height="28" rx="4" fill="${k < 2 ? 'var(--green)' : 'var(--panel)'}" stroke="var(--ink)" stroke-width="2.5"/>` + (k < 2 ? `<path d="M${476 + k * 36} 44l6 6 10 -12" stroke="var(--panel)" stroke-width="3" fill="none"/>` : '')).join('') + label(520, 80, T('checkers you pick', 'ผู้ตรวจที่คุณเลือก'), 'middle', 19),
+    en2:'The town picks its own checkers (DVNs, decentralized verifier networks). A delivery hand carries the mail; the checkers vouch for it.', th2:'หมู่บ้านเลือกผู้ตรวจของตัวเอง (DVN เครือข่ายผู้ตรวจแบบกระจาย) มีคนส่งของถือจดหมายไป ผู้ตรวจรับรองว่าถูกต้อง',
+    trust:['the checkers you picked', 'ผู้ตรวจที่คุณเลือกเอง'], since:['version 2 since January 2024', 'รุ่น 2 ตั้งแต่มกราคม 2024']},
+  {id:'axl', en:'Axelar', th:'Axelar',
+    draw: () => creek(680, 240) + town(110, 120, A()) + town(570, 120, B()) + `<ellipse cx="340" cy="130" rx="70" ry="34" fill="var(--wood)" opacity=".5"/>` + house(340, 110) + book(360, 106) + arrow(170, 130, 285, 130) + arrow(395, 130, 505, 130) + label(340, 200, T('a town in the middle of the creek', 'หมู่บ้านกลางลำห้วย'), 'middle', 19),
+    en2:'A whole town built in the middle of the creek, with its own book-keepers, passes every note along.', th2:'สร้างหมู่บ้านทั้งหมู่บ้านไว้กลางลำห้วย มีผู้ตรวจบัญชีของตัวเอง คอยส่งต่อทุกโน้ต',
+    trust:['the middle town\'s book-keepers', 'ผู้ตรวจบัญชีของหมู่บ้านกลาง'], since:['2022', 'ปี 2022']},
+  {id:'ca', en:'ChainsAtlas', th:'ChainsAtlas',
+    draw: () => creek(680, 240) + town(110, 90, A()) + town(110, 210, tn(TOWNS[1])) + town(570, 90, B()) + town(570, 210, tn(TOWNS[4])) + stove(58, 72) + stove(58, 192) + stove(518, 72) + stove(518, 192) + `<rect x="318" y="100" width="44" height="32" fill="var(--gold)" stroke="var(--ink)" stroke-width="2.5"/>` + label(340, 160, T('the recipe', 'สูตร'), 'middle', 19) + arrow(315, 110, 175, 85, 'var(--rust)') + arrow(315, 125, 175, 190, 'var(--rust)') + arrow(365, 110, 505, 85, 'var(--rust)') + arrow(365, 125, 505, 190, 'var(--rust)'),
+    en2:'Nothin\' crosses but the recipe and what\'s in the pot. The same stove cooks in every town; strategists plan the route, judges picked by coins, luck and record check it.', th2:'ไม่มีอะไรข้ามไปนอกจากสูตรกับของในหม้อ เตาเดียวกันทำอาหารในทุกหมู่บ้าน นักวางแผนวางเส้นทาง กรรมการที่เลือกจากเหรียญ ดวง และประวัติ คอยตรวจ',
+    trust:['the judges (Pythians) and the stove itself', 'กรรมการ (Pythian) และตัวเตาเอง'], since:['whitepaper August 2022; GO beta 2024', 'เอกสารสิงหาคม 2022 ปลั๊กอิน GO รุ่นทดลอง 2024']},
+];
+let way = 'ca';
+function renderWays() {
+  $('ways').innerHTML = WAYS.map(w => `<button type="button" class="go" data-way="${w.id}" aria-pressed="${w.id === way}">${esc(T(w.en, w.th))}</button>`).join('');
+  const w = WAYS.find(x => x.id === way);
+  $('waySvg').innerHTML = `<defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="context-stroke"/></marker></defs>` + w.draw();
+  $('wayText').innerHTML = `<p>${esc(T(w.en2, w.th2))}</p><p><b>${T('You trust:', 'ต้องไว้ใจ:')}</b> ${esc(T(...w.trust))}</p><p><b>${T('Running:', 'เริ่มใช้:')}</b> ${esc(T(...w.since))}</p>`;
+}
+$('ways').addEventListener('click', e => { const b = e.target.closest('[data-way]'); if (!b) return; way = b.dataset.way; renderWays(); });
+renders.push(renderWays);
+
+/* ---------- words ---------- */
+const GLOSS = [
+  ['Blockchain', 'บล็อกเชน', 'A ledger book a whole town keeps together.', 'สมุดบัญชีที่คนทั้งหมู่บ้านช่วยกันจด'],
+  ['Validator', 'ผู้ตรวจบัญชี (validator)', 'One of the folks holdin\' a copy and checkin\' new lines.', 'คนที่ถือสำเนาและตรวจบรรทัดใหม่'],
+  ['Smart contract', 'สมาร์ตคอนแทรกต์', 'A little program wrote into the book.', 'โปรแกรมเล็ก ๆ ที่เขียนไว้ในสมุด'],
+  ['Virtual machine', 'คอมพิวเตอร์จำลอง (virtual machine)', 'A pretend computer made of software. The stove.', 'คอมพิวเตอร์สมมติที่ทำจากซอฟต์แวร์ คือเตา'],
+  ['Transaction', 'ธุรกรรม', 'One slip, one entry in the book.', 'หนึ่งใบ หนึ่งรายการในสมุด'],
+  ['Hash', 'แฮช', 'A fingerprint for data. Change one letter, the whole print changes.', 'ลายนิ้วมือของข้อมูล แก้ตัวอักษรเดียว ลายเปลี่ยนหมด'],
+  ['Stake', 'เงินค้ำ (stake)', 'Coins put up as a bond. Misbehave and you can lose \'em.', 'เหรียญที่วางค้ำประกัน ทำผิดอาจเสียไป'],
+  ['Bridge', 'สะพาน', 'Anything carryin\' value or notes between two books.', 'อะไรก็ตามที่พาเงินหรือข้อความข้ามระหว่างสองสมุด'],
+  ['Light client', 'ไลต์ไคลเอนต์', 'A little copy of another town\'s headlines, enough to check its postmarks.', 'สำเนาพาดหัวข่าวของอีกหมู่บ้าน พอให้ตรวจตราไปรษณีย์ได้'],
+];
+function renderGloss() { $('gloss').innerHTML = GLOSS.map(g => `<dt>${esc(T(g[0], g[1]))}</dt><dd>${esc(T(g[2], g[3]))}</dd>`).join(''); }
+renders.push(renderGloss);
+
+/* ---------- language ---------- */
+function setLang(l) {
+  L = l; root.dataset.lang = l; document.documentElement.lang = l;
+  document.querySelectorAll('.lang button').forEach(b => b.setAttribute('aria-pressed', b.dataset.l === l));
+  try { localStorage.setItem('chains-lang', l); } catch (e) {}
+  renders.forEach(f => f());
+}
+document.querySelectorAll('.lang button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.l)));
+setLang(L);
+})();
+</script>
+
+</body>
+</html>
