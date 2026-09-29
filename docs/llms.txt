@@ -1,0 +1,13 @@
+# Chains, Drawn · โซ่ วาดให้ดู
+
+ChainsAtlas and comparable cross-chain tech, explained with toys, in English and Thai.
+
+- Every town keeps its own book: blockchains as ledgers that don't talk to each other.
+- Bring your own stove: ChainsAtlas virtualization units, a DLX-style virtual machine inside a smart contract; the C sum example from the ChainsAtlas GO README, stepped line by line.
+- Too long for one card: bytecode segmentation, execution transfer (state dumped at the end of each card), chained submission with SHA-256 fingerprints; a crooked card is caught.
+- Which town cooks it: chain profiles (measured vs voted), Proof-of-Strategy, the client's cost/latency preference α.
+- Who checks the planner: Pythian selection, 40% stake / 20% random / 40% reliability; Athena and Hermes tokens.
+- Other ways across: lock-and-mint bridges, committee keys (Ronin 5/9, Wormhole 13/19), Ronin/Wormhole/Nomad losses of 2022; Cosmos IBC, Polkadot, Chainlink CCIP, LayerZero, Axelar; kin: Java, WebAssembly, Cartesi, RISC Zero.
+- The five towns and their numbers are pretend.
+
+Cites: ChainsAtlas whitepaper (15 Aug 2022); ChainsAtlas GO VS Code README; aelf partnership post (Jan 2024); DLX; rekt.news; protocol docs. Text CC BY 4.0, code MIT.
